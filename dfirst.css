@@ -1,0 +1,43 @@
+/* desktop deal with max-width and descending */
+.container {
+    display: flex;
+}
+
+.container > * + * {
+    margin-left: 10px;
+}
+    
+
+.box {
+    float: left;
+    height: 50px;
+    //width: 30%;
+    flex: 1;
+    background-color: #e84610;
+}
+
+@media (max-width: 991px){
+    .box {
+        background-color: #0997d3;
+    }
+}
+
+@media (max-width: 767px){
+    .container {
+        display: block;
+        border: 1px dotted pink;
+    }
+    
+    .container > * + * {
+    margin-top: 10px;
+    }
+    
+    .box {
+        float: none;
+        //width: 100%;
+        //flex: none;
+        //display: block;
+        background-color: lightgrey;
+        margin-left: 0;
+    }
+}
